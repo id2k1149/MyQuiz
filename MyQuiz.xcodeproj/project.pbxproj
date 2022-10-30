@@ -37,6 +37,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		507DB787290F427B00C553B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		507DB788290F429D00C553B0 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				50DF7EBE290F3FB50092998D /* Main.storyboard */,
+				50DF7EC3290F3FB70092998D /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		507DB789290F42E800C553B0 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				50DF7EB8290F3FB50092998D /* AppDelegate.swift */,
+				50DF7EBA290F3FB50092998D /* SceneDelegate.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
 		50DF7EAC290F3FB50092998D = {
 			isa = PBXGroup;
 			children = (
@@ -56,12 +81,11 @@
 		50DF7EB7290F3FB50092998D /* MyQuiz */ = {
 			isa = PBXGroup;
 			children = (
-				50DF7EB8290F3FB50092998D /* AppDelegate.swift */,
-				50DF7EBA290F3FB50092998D /* SceneDelegate.swift */,
+				507DB787290F427B00C553B0 /* Models */,
 				50DF7ECC290F40C20092998D /* ViewControllers */,
-				50DF7EBE290F3FB50092998D /* Main.storyboard */,
+				507DB788290F429D00C553B0 /* Storyboards */,
+				507DB789290F42E800C553B0 /* SupportFiles */,
 				50DF7EC1290F3FB70092998D /* Assets.xcassets */,
-				50DF7EC3290F3FB70092998D /* LaunchScreen.storyboard */,
 				50DF7EC6290F3FB70092998D /* Info.plist */,
 			);
 			path = MyQuiz;
