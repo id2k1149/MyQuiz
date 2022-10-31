@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50942CA129101CFE0083C8C5 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50942CA029101CFE0083C8C5 /* Question.swift */; };
+		50942CA329101E410083C8C5 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50942CA229101E410083C8C5 /* Answer.swift */; };
 		50DF7EB9290F3FB50092998D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DF7EB8290F3FB50092998D /* AppDelegate.swift */; };
 		50DF7EBB290F3FB50092998D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DF7EBA290F3FB50092998D /* SceneDelegate.swift */; };
 		50DF7EBD290F3FB50092998D /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50DF7EBC290F3FB50092998D /* StartViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50942CA029101CFE0083C8C5 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		50942CA229101E410083C8C5 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		50DF7EB5290F3FB50092998D /* MyQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50DF7EB8290F3FB50092998D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50DF7EBA290F3FB50092998D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +44,8 @@
 		507DB787290F427B00C553B0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				50942CA029101CFE0083C8C5 /* Question.swift */,
+				50942CA229101E410083C8C5 /* Answer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -171,6 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				50DF7EBD290F3FB50092998D /* StartViewController.swift in Sources */,
+				50942CA129101CFE0083C8C5 /* Question.swift in Sources */,
+				50942CA329101E410083C8C5 /* Answer.swift in Sources */,
 				50DF7EB9290F3FB50092998D /* AppDelegate.swift in Sources */,
 				50DF7EBB290F3FB50092998D /* SceneDelegate.swift in Sources */,
 			);
