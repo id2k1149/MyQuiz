@@ -29,7 +29,10 @@
                                         <rect key="frame" x="0.0" y="52" width="276.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="Begin the quiz"/>
+                                        <state key="normal" title="Start quiz"/>
+                                        <connections>
+                                            <segue destination="ABr-oz-u5J" kind="show" id="Z3J-QE-nyW"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -78,7 +81,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="125" y="-34"/>
+            <point key="canvasLocation" x="927" y="-779"/>
+        </scene>
+        <!--Question ...  of  ...-->
+        <scene sceneID="bUC-AG-hdS">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="w4l-g8-A19" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4iL-0e-bDi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="eN3-ve-dmk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Question ...  of  ..." id="EFt-Lu-KIm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SNy-b5-Gtd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-35.532233883058474"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="r4S-FB-zer">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ABr-oz-u5J" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="7Wx-3z-ww3"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Vff-Rr-Fg8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w4l-g8-A19" kind="relationship" relationship="rootViewController" id="Stx-0Q-c0h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="orH-tR-XZY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="-779"/>
         </scene>
     </scenes>
     <resources>
