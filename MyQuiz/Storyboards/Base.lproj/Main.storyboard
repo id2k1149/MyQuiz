@@ -205,22 +205,74 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="CLh-vN-7bs">
+                                <rect key="frame" x="20" y="276" width="335" height="115.5"/>
+                                <subviews>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="W0w-RX-aPb">
+                                        <rect key="frame" x="-2" y="0.0" width="339" height="31"/>
+                                    </slider>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j6S-Bo-k9X">
+                                        <rect key="frame" x="0.0" y="46" width="335" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddX-yS-o3Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krh-1P-x7s">
+                                                <rect key="frame" x="167.5" y="0.0" width="167.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVi-Bb-93e">
+                                        <rect key="frame" x="0.0" y="82.5" width="335" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Answer"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-NS-hnl">
+                                <rect key="frame" x="20" y="104" width="335" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owY-QL-in1">
+                                <rect key="frame" x="20" y="96" width="335" height="4"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BEf-gb-LoK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="pZP-NS-hnl" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="A42-RK-D49"/>
                             <constraint firstItem="Pb6-QJ-7ef" firstAttribute="centerY" secondItem="qQ3-8m-QJ7" secondAttribute="centerY" id="D2e-r2-byV">
                                 <variation key="heightClass=compact-widthClass=compact" constant="15"/>
                                 <variation key="heightClass=regular-widthClass=compact" constant="15"/>
                             </constraint>
                             <constraint firstItem="Pb6-QJ-7ef" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="E1S-jK-n5R"/>
+                            <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="owY-QL-in1" secondAttribute="trailing" constant="20" id="PS0-fo-XH3"/>
+                            <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="CLh-vN-7bs" secondAttribute="trailing" constant="20" id="Q2K-NI-gjn"/>
+                            <constraint firstItem="owY-QL-in1" firstAttribute="top" secondItem="BEf-gb-LoK" secondAttribute="top" id="UCY-7d-bdc"/>
+                            <constraint firstItem="pZP-NS-hnl" firstAttribute="top" secondItem="BEf-gb-LoK" secondAttribute="top" constant="8" id="UiT-pu-ACS"/>
                             <constraint firstItem="3ak-Rf-ARH" firstAttribute="centerY" secondItem="qQ3-8m-QJ7" secondAttribute="centerY" id="Vkt-Ee-q87">
                                 <variation key="heightClass=compact-widthClass=compact" constant="15"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="15"/>
                             </constraint>
                             <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="Pb6-QJ-7ef" secondAttribute="trailing" constant="20" id="YFm-6W-DIs"/>
+                            <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="pZP-NS-hnl" secondAttribute="trailing" constant="20" id="f38-q5-FsR"/>
+                            <constraint firstItem="CLh-vN-7bs" firstAttribute="centerY" secondItem="qQ3-8m-QJ7" secondAttribute="centerY" id="fB6-p7-RYb">
+                                <variation key="heightClass=compact-widthClass=compact" constant="15"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="15"/>
+                            </constraint>
                             <constraint firstItem="3ak-Rf-ARH" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="gCq-h7-Ev8"/>
+                            <constraint firstItem="CLh-vN-7bs" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="gVa-ue-s2B"/>
                             <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="3ak-Rf-ARH" secondAttribute="trailing" constant="20" id="lMz-6b-84T"/>
+                            <constraint firstItem="owY-QL-in1" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="uIY-f5-rVB"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
