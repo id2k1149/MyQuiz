@@ -303,8 +303,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="multipleStackView" destination="Pb6-QJ-7ef" id="t4G-S8-80n"/>
-                        <outlet property="progressView" destination="owY-QL-in1" id="W5Y-GI-jSe"/>
                         <outlet property="questionLabel" destination="pZP-NS-hnl" id="bZh-hu-U8u"/>
+                        <outlet property="questionProgressView" destination="owY-QL-in1" id="YdC-Oy-IZJ"/>
                         <outlet property="rangedSlider" destination="W0w-RX-aPb" id="x9d-sn-wex"/>
                         <outlet property="rangedStackView" destination="CLh-vN-7bs" id="jLF-Ot-4ZF"/>
                         <outlet property="singleStackView" destination="3ak-Rf-ARH" id="5dv-an-1Eh"/>

@@ -10,7 +10,7 @@ import UIKit
 class QuestionsViewController: UIViewController {
     
     
-    @IBOutlet var progressView: UIProgressView!
+    @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     
     @IBOutlet var singleStackView: UIStackView!
@@ -60,6 +60,12 @@ extension QuestionsViewController {
         
         // set current question for question label
         questionLabel.text = currentQuestion.title
+        
+        // calculate progress
+        let totalProgress = Float(questionIndex) / Float(questions.count)
+        
+        // set progress for questionProgressView
+        questionProgressView.setProgress(totalProgress, animated: true)
         
         
     }
