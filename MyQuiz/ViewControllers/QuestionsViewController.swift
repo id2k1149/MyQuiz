@@ -9,6 +9,10 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
+    
+    @IBOutlet var progressView: UIProgressView!
+    @IBOutlet var questionLabel: UILabel!
+    
     @IBOutlet var singleStackView: UIStackView!
     @IBOutlet var singleButtons: [UIButton]!
     
@@ -21,11 +25,12 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangesLabels: [UILabel]!
     
     private let questions = Question.getQuestions()
-
+    private var questionIndex = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateUI()
+        
     }
     
     @IBAction func singleAnswerButtonTapped(_ sender: UIButton) {
@@ -49,6 +54,13 @@ extension QuestionsViewController {
         for stackView in [singleStackView, multipleStackView, rangedStackView] {
             stackView?.isHidden = true
         }
+        
+        // get current question
+        let currentQuestion = questions[questionIndex]
+        
+        // set current question for question label
+        questionLabel.text = currentQuestion.title
+        
         
     }
 }

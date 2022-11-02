@@ -109,15 +109,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owY-QL-in1">
+                                <rect key="frame" x="20" y="96" width="335" height="4"/>
+                            </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZP-NS-hnl">
                                 <rect key="frame" x="20" y="104" width="335" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="owY-QL-in1">
-                                <rect key="frame" x="20" y="96" width="335" height="4"/>
-                            </progressView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3ak-Rf-ARH">
                                 <rect key="frame" x="20" y="237.5" width="335" height="192"/>
                                 <subviews>
@@ -303,6 +303,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="multipleStackView" destination="Pb6-QJ-7ef" id="t4G-S8-80n"/>
+                        <outlet property="progressView" destination="owY-QL-in1" id="W5Y-GI-jSe"/>
+                        <outlet property="questionLabel" destination="pZP-NS-hnl" id="bZh-hu-U8u"/>
                         <outlet property="rangedSlider" destination="W0w-RX-aPb" id="x9d-sn-wex"/>
                         <outlet property="rangedStackView" destination="CLh-vN-7bs" id="jLF-Ot-4ZF"/>
                         <outlet property="singleStackView" destination="3ak-Rf-ARH" id="5dv-an-1Eh"/>
