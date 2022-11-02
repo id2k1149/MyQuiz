@@ -67,6 +67,9 @@ extension QuestionsViewController {
         // set progress for questionProgressView
         questionProgressView.setProgress(totalProgress, animated: true)
         
+        // set navigation title
+        title = "Question #\(questionIndex + 1) of \(questions.count)"
+        
         
     }
 }
