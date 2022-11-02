@@ -24,6 +24,8 @@ class QuestionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateUI()
     }
     
     @IBAction func singleAnswerButtonTapped(_ sender: UIButton) {
@@ -37,7 +39,17 @@ class QuestionsViewController: UIViewController {
     deinit {
         print("QuestionsViewController has been deallocated")
     }
+}
 
-
+// MARK: - Private Methods
+extension QuestionsViewController {
+    
+    private func updateUI() {
+        // hide stacks
+        for stackView in [singleStackView, multipleStackView, rangedStackView] {
+            stackView?.isHidden = true
+        }
+        
+    }
 }
 
