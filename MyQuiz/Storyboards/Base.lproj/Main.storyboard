@@ -293,7 +293,7 @@
         <!--Result-->
         <scene sceneID="RmP-hK-COj">
             <objects>
-                <viewController id="mG9-Lh-TEQ" sceneMemberID="viewController">
+                <viewController id="mG9-Lh-TEQ" customClass="ResultViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ODh-ta-fiW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
