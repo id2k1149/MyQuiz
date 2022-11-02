@@ -31,6 +31,8 @@ class QuestionsViewController: UIViewController {
         questions[questionIndex].answers
     }
     
+    private var answersChoosen: [Answer] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -38,9 +40,14 @@ class QuestionsViewController: UIViewController {
     }
     
     @IBAction func singleAnswerButtonTapped(_ sender: UIButton) {
+        guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
+        let answer = currentAnswers[buttonIndex]
+        answersChoosen.append(answer)
     }
+    
     @IBAction func multipleAnswerButtonTapped() {
     }
+    
     @IBAction func rangedAnswerButtonTapped() {
     }
     
