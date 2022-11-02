@@ -27,6 +27,10 @@ class QuestionsViewController: UIViewController {
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     
+    private var currentAnswers: [Answer] {
+        questions[questionIndex].answers
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -71,9 +75,28 @@ extension QuestionsViewController {
         title = "Question #\(questionIndex + 1) of \(questions.count)"
         
         // show current answers
-//        showCurrentAnswers(for: currentQuestion.type)
+        showCurrentAnswers(for: currentQuestion.responseType)
         
+    }
+    
+    private func showCurrentAnswers(for type: ResponseType) {
+        switch type {
+        case .single: showSingleStackView(with: currentAnswers)
+        case .multiple:
+            break
+        case .ranged:
+            break
+        }
+    }
+    
+    private func showSingleStackView(with answers: [Answer]) {
+        singleStackView.isHidden = false
         
+        // zip - A sequence of pairs built out of two underlying sequences.
+        // Creates a sequence of pairs built out of two underlying sequences.
+        for (button, answer) in zip(singleButtons, answers) {
+            button.setTitle(answer.title, for: .normal)
+        }
     }
 }
 
