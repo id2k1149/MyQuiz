@@ -43,6 +43,7 @@ class QuestionsViewController: UIViewController {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[buttonIndex]
         answersChoosen.append(answer)
+        nextQuestion()
     }
     
     @IBAction func multipleAnswerButtonTapped() {
@@ -104,6 +105,18 @@ extension QuestionsViewController {
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
         }
+    }
+    
+    private func nextQuestion() {
+        questionIndex += 1
+        
+        if questionIndex < questions.count {
+            updateUI()
+            return
+        }
+        
+        performSegue(withIdentifier: "showResult", sender: nil)
+        
     }
 }
 

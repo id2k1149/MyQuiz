@@ -127,7 +127,6 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonTapped" destination="7Oh-NB-GYv" eventType="touchUpInside" id="YTe-z1-z8g"/>
                                             <action selector="singleAnswerButtonTapped:" destination="7Oh-NB-GYv" eventType="touchUpInside" id="Sne-iM-QDO"/>
                                         </connections>
                                     </button>
@@ -295,11 +294,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Question # ...  of  ..." id="5NO-dw-t0o">
-                        <barButtonItem key="rightBarButtonItem" title="=&gt;" id="4FQ-AD-Nss">
-                            <connections>
-                                <segue destination="mG9-Lh-TEQ" kind="show" id="Ns6-Uf-XCY"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="=&gt;" id="4FQ-AD-Nss"/>
                     </navigationItem>
                     <connections>
                         <outlet property="multipleStackView" destination="Pb6-QJ-7ef" id="t4G-S8-80n"/>
@@ -376,9 +371,6 @@
             <point key="canvasLocation" x="2399" y="-54"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="UKX-FO-Ldi"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
