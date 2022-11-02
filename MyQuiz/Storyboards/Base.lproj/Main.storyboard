@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Start View Controller-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="StartViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +104,7 @@
         <!--Question # ...  of  ...-->
         <scene sceneID="rlF-3V-iVw">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="7Oh-NB-GYv" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="7Oh-NB-GYv" customClass="QuestionViewController" customModule="MyQuiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qQ3-8m-QJ7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,12 +274,6 @@
                             <constraint firstItem="BEf-gb-LoK" firstAttribute="trailing" secondItem="3ak-Rf-ARH" secondAttribute="trailing" constant="20" id="lMz-6b-84T"/>
                             <constraint firstItem="owY-QL-in1" firstAttribute="leading" secondItem="BEf-gb-LoK" secondAttribute="leading" constant="20" id="uIY-f5-rVB"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="3ak-Rf-ARH"/>
-                                <exclude reference="Pb6-QJ-7ef"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Question # ...  of  ..." id="5NO-dw-t0o">
                         <barButtonItem key="rightBarButtonItem" title="=&gt;" id="4FQ-AD-Nss">
