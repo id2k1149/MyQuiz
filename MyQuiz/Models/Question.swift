@@ -7,7 +7,7 @@
 
 struct Question {
     let title: String
-    let type: ResponseType
+    let responseType: ResponseType
     let answers: [Answer]
 }
 
@@ -24,7 +24,7 @@ extension Question {
           [
             Question(
                 title: "What food do you prefer?",
-                type: .single,
+                responseType: .single,
                 answers: [
                     Answer(title: "Steak", type: .dog),
                     Answer(title: "Fish", type: .cat),
@@ -34,7 +34,7 @@ extension Question {
             ),
             Question(
                 title: "What do you like more?",
-                type: .multiple,
+                responseType: .multiple,
                 answers: [
                     Answer(title: "Swim", type: .dog),
                     Answer(title: "Sleep", type: .cat),
@@ -44,7 +44,7 @@ extension Question {
             ),
             Question(
                 title: "Do you like car trips?",
-                type: .ranged,
+                responseType: .ranged,
                 answers: [
                     Answer(title: "Hate", type: .cat),
                     Answer(title: "I'm nervous", type: .rabbit),

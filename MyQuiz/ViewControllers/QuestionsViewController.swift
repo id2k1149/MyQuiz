@@ -70,6 +70,9 @@ extension QuestionsViewController {
         // set navigation title
         title = "Question #\(questionIndex + 1) of \(questions.count)"
         
+        // show current answers
+//        showCurrentAnswers(for: currentQuestion.type)
+        
         
     }
 }
