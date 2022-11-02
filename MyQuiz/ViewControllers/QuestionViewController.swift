@@ -12,6 +12,11 @@ class QuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // memory check
+    deinit {
+        print("QuestionViewController has been deallocated")
+    }
 
 
 }

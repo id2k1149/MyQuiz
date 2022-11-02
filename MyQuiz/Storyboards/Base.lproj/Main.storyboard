@@ -325,7 +325,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Result" id="JgT-nm-QRk">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="x29-mA-ruE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="x29-mA-ruE">
+                            <connections>
+                                <action selector="doneButtonTapped:" destination="mG9-Lh-TEQ" id="sua-Fp-F9F"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nRs-g0-SVE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,19 +11,21 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
+        // option 1
+//        view.window?.rootViewController?.dismiss(animated: true)
+        
+        // option 2
+        navigationController?.dismiss(animated: true)
+        
+        
     }
-    */
-
+    
+    // memory check
+    deinit {
+        print("ResultViewController has been deallocated")
+    }
 }
