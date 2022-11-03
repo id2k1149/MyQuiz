@@ -54,9 +54,6 @@ class QuestionsViewController: UIViewController {
         guard let resultViewController = segue.destination as? ResultViewController else { return }
         
         resultViewController.result = calculateResult(from: answersChoosen)
-       
-//        navigationItem.hidesBackButton = true
-    
     }
     
     // MARK: @IBAction func

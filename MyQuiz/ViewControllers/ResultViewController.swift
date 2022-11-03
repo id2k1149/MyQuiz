@@ -17,6 +17,8 @@ class ResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.hidesBackButton = true
+        
         resultLabel.text = "You are - \(String(result.type.rawValue))"
         infoLabel.text = result.type.definition
     }
