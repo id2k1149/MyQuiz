@@ -21,7 +21,16 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var multipleSwitches: [UISwitch]!
     
     @IBOutlet var rangedStackView: UIStackView!
-    @IBOutlet var rangedSlider: UISlider!
+    // set slider range
+    @IBOutlet var rangedSlider: UISlider! {
+        didSet {
+            let answerCount = Float(currentAnswers.count - 1)
+            rangedSlider.maximumValue = answerCount
+            // slider position
+            rangedSlider.value = answerCount / 2
+        }
+    }
+    
     @IBOutlet var rangesLabels: [UILabel]!
     
     private let questions = Question.getQuestions()
@@ -58,6 +67,7 @@ class QuestionsViewController: UIViewController {
     }
     
     @IBAction func rangedAnswerButtonTapped() {
+        
     }
     
     // memory check
