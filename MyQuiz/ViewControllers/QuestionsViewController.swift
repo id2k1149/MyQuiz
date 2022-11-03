@@ -43,10 +43,18 @@ class QuestionsViewController: UIViewController {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[buttonIndex]
         answersChoosen.append(answer)
+        print(answersChoosen)
         nextQuestion()
     }
     
     @IBAction func multipleAnswerButtonTapped() {
+        for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
+            if multipleSwitch.isOn {
+                answersChoosen.append(answer)
+                print(answersChoosen)
+            }
+        }
+        nextQuestion()
     }
     
     @IBAction func rangedAnswerButtonTapped() {
@@ -90,8 +98,7 @@ extension QuestionsViewController {
     private func showCurrentAnswers(for type: ResponseType) {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
-        case .multiple:
-            break
+        case .multiple: showMultipleStackView(with: currentAnswers)
         case .ranged:
             break
         }
@@ -104,6 +111,16 @@ extension QuestionsViewController {
         // Creates a sequence of pairs built out of two underlying sequences.
         for (button, answer) in zip(singleButtons, answers) {
             button.setTitle(answer.title, for: .normal)
+        }
+    }
+    
+    private func showMultipleStackView(with answers: [Answer]) {
+        multipleStackView.isHidden = false
+        
+        // zip - A sequence of pairs built out of two underlying sequences.
+        // Creates a sequence of pairs built out of two underlying sequences.
+        for (label, answer) in zip(multipleLabels, answers) {
+            label.text = answer.title
         }
     }
     
