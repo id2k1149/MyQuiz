@@ -45,7 +45,7 @@ extension ResultViewController {
     private func calculateResult(from answers: [Answer]) -> Answer {
         print(answers)
         var resultCount = 0
-        var resultType = AnimalType.cat
+        var resultType = answers[0].type
         
         AnimalType.allCases.forEach() {
             let each = $0
