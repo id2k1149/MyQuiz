@@ -12,12 +12,14 @@ class ResultViewController: UIViewController {
     @IBOutlet var resultLabel: UILabel!
     @IBOutlet var infoLabel: UILabel!
     
-    var result: Answer!
+    var answers: [Answer]!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.hidesBackButton = true
+        
+        let result = calculateResult(from: answers)
         
         resultLabel.text = "You are - \(String(result.type.rawValue))"
         infoLabel.text = result.type.definition
@@ -34,5 +36,28 @@ class ResultViewController: UIViewController {
     // memory check
     deinit {
         print("ResultViewController has been deallocated")
+    }
+}
+
+// MARK: - Private Methods
+extension ResultViewController {
+    
+    private func calculateResult(from answers: [Answer]) -> Answer {
+        print(answers)
+        var resultCount = 0
+        var resultType = AnimalType.cat
+        
+        AnimalType.allCases.forEach() {
+            let each = $0
+            let answerTypes = answers.filter { answer in
+                return answer.type == each
+            }
+            if answerTypes.count > resultCount {
+                resultCount = answerTypes.count
+                resultType = each
+            }
+        }
+        
+        return Answer(title: "", type: resultType)
     }
 }
