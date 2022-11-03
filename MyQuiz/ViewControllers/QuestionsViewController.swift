@@ -116,6 +116,10 @@ extension QuestionsViewController {
     private func showMultipleStackView(with answers: [Answer]) {
         multipleStackView.isHidden = false
         
+        for eachSwitch in multipleSwitches {
+            eachSwitch.isOn = false
+        }
+        
         // zip - A sequence of pairs built out of two underlying sequences.
         // Creates a sequence of pairs built out of two underlying sequences.
         for (label, answer) in zip(multipleLabels, answers) {

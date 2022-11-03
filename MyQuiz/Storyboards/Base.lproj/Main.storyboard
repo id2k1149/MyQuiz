@@ -316,6 +316,7 @@
                         <outletCollection property="multipleSwitches" destination="ufC-u2-cI0" collectionClass="NSMutableArray" id="a1v-X0-dWK"/>
                         <outletCollection property="multipleSwitches" destination="UW9-dp-wTx" collectionClass="NSMutableArray" id="0yo-4a-o1M"/>
                         <outletCollection property="multipleSwitches" destination="hgM-NM-WGR" collectionClass="NSMutableArray" id="tES-Qc-AMH"/>
+                        <outletCollection property="multipleLabels" destination="rlb-E6-pBb" collectionClass="NSMutableArray" id="xDg-N6-llN"/>
                         <segue destination="mG9-Lh-TEQ" kind="show" identifier="showResult" id="UKX-FO-Ldi"/>
                     </connections>
                 </viewController>
