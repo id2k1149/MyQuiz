@@ -53,7 +53,7 @@ class QuestionsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let resultViewController = segue.destination as? ResultViewController else { return }
         
-        resultViewController.result = calculateResult(from: answersChoosen)
+        resultViewController.answers = answersChoosen
     }
     
     // MARK: @IBAction func
@@ -165,23 +165,5 @@ extension QuestionsViewController {
         performSegue(withIdentifier: "showResult", sender: nil)
     }
     
-    private func calculateResult(from answers: [Answer]) -> Answer {
-        print(answers)
-        var resultCount = 0
-        var resultType = AnimalType.cat
-        
-        AnimalType.allCases.forEach() {
-            let each = $0
-            let answerTypes = answers.filter { answer in
-                return answer.type == each
-            }
-            if answerTypes.count > resultCount {
-                resultCount = answerTypes.count
-                resultType = each
-            }
-        }
-        
-        return Answer(title: "", type: resultType)
-    }
 }
 
