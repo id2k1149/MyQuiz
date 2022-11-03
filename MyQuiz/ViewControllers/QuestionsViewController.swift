@@ -70,6 +70,7 @@ class QuestionsViewController: UIViewController {
         // int value of rangedSlider.value instead of round
         let index = lrintf(rangedSlider.value)
         answersChoosen.append(currentAnswers[index])
+        print(answersChoosen)
         nextQuestion()
     }
     
