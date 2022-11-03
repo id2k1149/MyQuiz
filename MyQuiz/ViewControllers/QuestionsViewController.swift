@@ -9,7 +9,7 @@ import UIKit
 
 class QuestionsViewController: UIViewController {
     
-    
+    // MARK: @IBOutlet
     @IBOutlet var questionProgressView: UIProgressView!
     @IBOutlet var questionLabel: UILabel!
     
@@ -33,6 +33,7 @@ class QuestionsViewController: UIViewController {
     
     @IBOutlet var rangesLabels: [UILabel]!
     
+    // MARK: private
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     
@@ -42,17 +43,27 @@ class QuestionsViewController: UIViewController {
     
     private var answersChoosen: [Answer] = []
     
+    // MARK: override func
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let resultViewController = segue.destination as? ResultViewController else { return }
+        
+        resultViewController.result = calculateResult(from: answersChoosen)
+       
+//        navigationItem.hidesBackButton = true
+    
+    }
+    
+    // MARK: @IBAction func
     @IBAction func singleAnswerButtonTapped(_ sender: UIButton) {
         guard let buttonIndex = singleButtons.firstIndex(of: sender) else { return }
         let answer = currentAnswers[buttonIndex]
         answersChoosen.append(answer)
-        print(answersChoosen)
         nextQuestion()
     }
     
@@ -60,7 +71,6 @@ class QuestionsViewController: UIViewController {
         for (multipleSwitch, answer) in zip(multipleSwitches, currentAnswers) {
             if multipleSwitch.isOn {
                 answersChoosen.append(answer)
-                print(answersChoosen)
             }
         }
         nextQuestion()
@@ -70,7 +80,6 @@ class QuestionsViewController: UIViewController {
         // int value of rangedSlider.value instead of round
         let index = lrintf(rangedSlider.value)
         answersChoosen.append(currentAnswers[index])
-        print(answersChoosen)
         nextQuestion()
     }
     
@@ -157,7 +166,24 @@ extension QuestionsViewController {
         }
         
         performSegue(withIdentifier: "showResult", sender: nil)
+    }
+    
+    private func calculateResult(from answers: [Answer]) -> Answer {
+        var resultCount = 0
+        var resultType = AnimalType.cat
         
+        AnimalType.allCases.forEach() {
+            let each = $0
+            let answerTypes = answers.filter { answer in
+                return answer.type == each
+            }
+            if answerTypes.count > resultCount {
+                resultCount = answerTypes.count
+                resultType = each
+            }
+        }
+        
+        return Answer(title: "", type: resultType)
     }
 }
 

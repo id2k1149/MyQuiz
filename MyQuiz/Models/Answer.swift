@@ -7,10 +7,10 @@
 
 struct Answer {
     let title: String
-    let type: Animaltype
+    let type: AnimalType
 }
 
-enum Animaltype: Character {
+enum AnimalType: Character, CaseIterable {
     case dog = "🐶"
     case cat = "🐱"
     case rabbit = "🐰"
