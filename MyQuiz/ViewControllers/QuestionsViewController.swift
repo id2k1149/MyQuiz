@@ -99,8 +99,7 @@ extension QuestionsViewController {
         switch type {
         case .single: showSingleStackView(with: currentAnswers)
         case .multiple: showMultipleStackView(with: currentAnswers)
-        case .ranged:
-            break
+        case .ranged: showRangedStackView(with: currentAnswers)
         }
     }
     
@@ -122,6 +121,13 @@ extension QuestionsViewController {
         for (label, answer) in zip(multipleLabels, answers) {
             label.text = answer.title
         }
+    }
+    
+    private func showRangedStackView(with answers: [Answer]) {
+        rangedStackView.isHidden = false
+        
+        rangesLabels.first?.text = answers.first?.title
+        rangesLabels.last?.text = answers.last?.title
     }
     
     private func nextQuestion() {

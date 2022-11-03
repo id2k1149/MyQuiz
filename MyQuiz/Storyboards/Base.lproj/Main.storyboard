@@ -307,16 +307,15 @@
                         <outletCollection property="singleButtons" destination="zib-TG-3gq" collectionClass="NSMutableArray" id="evx-xR-Vkg"/>
                         <outletCollection property="singleButtons" destination="mPL-gx-L1N" collectionClass="NSMutableArray" id="FS5-C2-0et"/>
                         <outletCollection property="singleButtons" destination="I35-9k-qhT" collectionClass="NSMutableArray" id="8wF-iw-zLS"/>
-                        <outletCollection property="multipleLabels" destination="BxP-TM-peJ" collectionClass="NSMutableArray" id="v3z-qN-gh9"/>
-                        <outletCollection property="multipleLabels" destination="0Q3-0w-LKW" collectionClass="NSMutableArray" id="hUX-Pp-0HK"/>
-                        <outletCollection property="multipleLabels" destination="PRP-Eh-abv" collectionClass="NSMutableArray" id="DHZ-yY-nyE"/>
-                        <outletCollection property="multipleLabels" destination="rlb-E6-pBb" collectionClass="NSMutableArray" id="L6B-YR-fM0"/>
-                        <outletCollection property="multipleSwitches" destination="3AA-DH-s2f" collectionClass="NSMutableArray" id="SSF-Z0-bLh"/>
-                        <outletCollection property="multipleSwitches" destination="ufC-u2-cI0" collectionClass="NSMutableArray" id="M5K-5T-9cZ"/>
-                        <outletCollection property="multipleSwitches" destination="UW9-dp-wTx" collectionClass="NSMutableArray" id="fTQ-5Z-93M"/>
-                        <outletCollection property="multipleSwitches" destination="hgM-NM-WGR" collectionClass="NSMutableArray" id="Bzb-9t-Dcs"/>
                         <outletCollection property="rangesLabels" destination="ddX-yS-o3Q" collectionClass="NSMutableArray" id="u3d-hP-NnV"/>
                         <outletCollection property="rangesLabels" destination="krh-1P-x7s" collectionClass="NSMutableArray" id="Qe6-2Q-8cb"/>
+                        <outletCollection property="multipleLabels" destination="BxP-TM-peJ" collectionClass="NSMutableArray" id="QOF-K8-siq"/>
+                        <outletCollection property="multipleLabels" destination="0Q3-0w-LKW" collectionClass="NSMutableArray" id="Sw9-c4-Ztb"/>
+                        <outletCollection property="multipleLabels" destination="PRP-Eh-abv" collectionClass="NSMutableArray" id="afe-Sg-ibe"/>
+                        <outletCollection property="multipleSwitches" destination="3AA-DH-s2f" collectionClass="NSMutableArray" id="DMV-ky-FVn"/>
+                        <outletCollection property="multipleSwitches" destination="ufC-u2-cI0" collectionClass="NSMutableArray" id="a1v-X0-dWK"/>
+                        <outletCollection property="multipleSwitches" destination="UW9-dp-wTx" collectionClass="NSMutableArray" id="0yo-4a-o1M"/>
+                        <outletCollection property="multipleSwitches" destination="hgM-NM-WGR" collectionClass="NSMutableArray" id="tES-Qc-AMH"/>
                         <segue destination="mG9-Lh-TEQ" kind="show" identifier="showResult" id="UKX-FO-Ldi"/>
                     </connections>
                 </viewController>
