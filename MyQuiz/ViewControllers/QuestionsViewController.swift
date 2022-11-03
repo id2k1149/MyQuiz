@@ -166,6 +166,7 @@ extension QuestionsViewController {
     }
     
     private func calculateResult(from answers: [Answer]) -> Answer {
+        print(answers)
         var resultCount = 0
         var resultType = AnimalType.cat
         
