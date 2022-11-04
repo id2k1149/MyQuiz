@@ -16,13 +16,9 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         
-        self.navigationItem.hidesBackButton = true
-        
-        let result = calculateResult(from: answers)
-        
-        resultLabel.text = "You are - \(String(result.type.rawValue))"
-        infoLabel.text = result.type.definition
+        calculateResult(from: answers)
     }
     
     @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
@@ -42,22 +38,29 @@ class ResultViewController: UIViewController {
 // MARK: - Private Methods
 extension ResultViewController {
     
-    private func calculateResult(from answers: [Answer]) -> Answer {
+    private func calculateResult(from answers: [Answer]) {
         print(answers)
         var resultCount = 0
         var resultType = answers[0].type
         
         AnimalType.allCases.forEach() {
             let each = $0
+            
             let answerTypes = answers.filter { answer in
-                return answer.type == each
+                answer.type == each
             }
+            
             if answerTypes.count > resultCount {
                 resultCount = answerTypes.count
                 resultType = each
             }
         }
         
-        return Answer(title: "", type: resultType)
+        updateUI(with: resultType)
+    }
+    
+    private func updateUI(with resultType: AnimalType) {
+        resultLabel.text = "You are - \(resultType.rawValue)"
+        infoLabel.text = resultType.definition
     }
 }
