@@ -16,11 +16,9 @@ class ResultViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = true
         
         calculateResult(from: answers)
-        
     }
     
     @IBAction func doneButtonTapped(_ sender: UIBarButtonItem) {
@@ -47,9 +45,11 @@ extension ResultViewController {
         
         AnimalType.allCases.forEach() {
             let each = $0
+            
             let answerTypes = answers.filter { answer in
-                return answer.type == each
+                answer.type == each
             }
+            
             if answerTypes.count > resultCount {
                 resultCount = answerTypes.count
                 resultType = each
