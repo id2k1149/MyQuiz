@@ -34,6 +34,7 @@ class QuestionsViewController: UIViewController {
     @IBOutlet var rangesLabels: [UILabel]!
     
     // MARK: private
+    // call static func
     private let questions = Question.getQuestions()
     private var questionIndex = 0
     

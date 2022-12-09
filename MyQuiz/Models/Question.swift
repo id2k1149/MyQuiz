@@ -18,7 +18,7 @@ enum ResponseType {
 }
 
 extension Question {
-    
+    // static 
     static func getQuestions() -> [Question] {
         // questions array
           [
